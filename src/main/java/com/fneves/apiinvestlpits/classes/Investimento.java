@@ -1,5 +1,7 @@
 package com.fneves.apiinvestlpits.classes;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,12 +14,16 @@ public class Investimento {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
+    @ApiModelProperty(value = "Tipo do investimento")
     private Integer tipo;
 
+    @ApiModelProperty(value = "Código/Nome do Investimento")
     private String codigo;
 
+    @ApiModelProperty(value = "Quantidade")
     private Integer qtd;
 
+    @ApiModelProperty(value = "Valor R$")
     private float valor;
 
     public Integer getId() {
